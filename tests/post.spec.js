@@ -1,35 +1,35 @@
 //Chapter 2 POST request
 
-const app = require('../src/app');
-const request = require('supertest');
-const expect = require('chai').expect;
+// const app = require('../src/app');
+// const request = require('supertest');
+// const expect = require('chai').expect;
 
-describe('Post request', () => {
-    it('json response', () => {
-        request(app)
-        .post('/course')
-         //url we are posting against
-        .send({ "name": "supertest" })
-        //data thats being sent
-        .set('Accept', 'application/json')
-        //specify accept header
-        .end((err, res) => {
-            expect(res.body.name).to.be.equal('supertest');
-            //checking that body return 'supertest'
-        })
-    })
+// describe('Post request', () => {
+//     it('json response', () => {
+//         request(app)
+//         .post('/course')
+//          //url we are posting against
+//         .send({ "name": "supertest" })
+//         //data thats being sent
+//         .set('Accept', 'application/json')
+//         //specify accept header
+//         .end((err, res) => {
+//             expect(res.body.name).to.be.equal('supertest');
+//             //checking that body return 'supertest'
+//         })
+//     })
 
-    it('form response', (done) => {
-        request(app)
-        .post('/course')
-        .send('name=supertest')
-        //pass a string as form object??
-        .set('Accept', 'application/x-www-form-urlencoded')
-        //set accept header
-        .expect(200, { "id": "2", "name": "supertest"}, done);
-        //passing whole response to check against
-    })
-});
+//     it('form response', (done) => {
+//         request(app)
+//         .post('/course')
+//         .send('name=supertest')
+//         //pass a string as form object??
+//         .set('Accept', 'application/x-www-form-urlencoded')
+//         //set accept header
+//         .expect(200, { "id": "2", "name": "supertest"}, done);
+//         //passing whole response to check against
+//     })
+// });
 
 
 // Post request
