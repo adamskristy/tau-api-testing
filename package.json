@@ -1,0 +1,30 @@
+{
+  "name": "tau-api-testing",
+  "version": "1.0.0",
+  "description": "Training resource to be used alongside \"API Testing with Supertest & Nock\" on Test Automation University.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha 'tests/*.spec.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamskristy/tau-api-testing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adamskristy/tau-api-testing/issues"
+  },
+  "homepage": "https://github.com/adamskristy/tau-api-testing#readme",
+  "dependencies": {
+    "chai": "^4.3.7",
+    "express": "^4.18.2",
+    "mocha": "^10.2.0",
+    "nock": "^13.3.0",
+    "supertest": "^6.3.3"
+  }
+}
